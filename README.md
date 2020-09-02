@@ -1,30 +1,33 @@
-defcoin integration/staging tree
+Defcoin integration/staging tree
 ================================
 
-http://www.defcoin.org
+[![Build Status](https://travis-ci.org/NaH012/Defcoin.svg?branch=master)](https://travis-ci.org/NaH012/Defcoin)
 
-Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 defcoin Developers
+http://www.defcoin-ng.org
 
-What is defcoin?
+Copyright (c) 2009-2018 Bitcoin Developers<br>
+Copyright (c) 2011-2018 Litecoin Developers<br>
+Copyright (c) 2011-2018 Defcoin Developers
+
+What is Defcoin?
 ----------------
 
-defcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
- - 2.5 minute block targets
+Defcoin is a fork of Litecoin which is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
+ - 2 minute block targets
+ - 720 blocks to retarget difficulty
+
+ The rest is the same as Litecoin.
  - subsidy halves in 840k blocks (~4 years)
  - ~84 million total coins
-
-The rest is the same as Bitcoin.
- - 50 coins per block
- - 2016 blocks to retarget difficulty
+ - 50 coins per block. Now 25 coins after first halving event
 
 For more information, as well as an immediately useable, binary version of
-the defcoin client sofware, see http://www.defcoin.org.
+the Defcoin client sofware, see http://www.defcoin-ng.org.
 
 License
 -------
 
-defcoin is released under the terms of the MIT license. See `COPYING` for more
+Defcoin is released under the terms of the MIT license. See [`COPYING`](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 Development process
@@ -38,7 +41,7 @@ development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
 submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=bitcoin-development).
+[reddit](https://www.reddit.com/r/defcoin/).
 
 The patch will be accepted if there is broad consensus that it is a good thing.
 Developers should expect to rework and resubmit patches if the code doesn't
@@ -46,29 +49,40 @@ match the project's coding conventions (see `doc/coding.txt`) or are
 controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
+completely stable. [Tags](https://github.com/NaH012/defcoin/tags) are created
 regularly to indicate new official, stable release versions of defcoin.
 
-Testing
--------
-
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test. Please be patient and help out, and
-remember this is a security-critical project where any mistake might cost people
-lots of money.
 
 ### Automated Testing
 
 Developers are strongly encouraged to write unit tests for new code, and to
 submit new unit tests for old code.
 
-Unit tests for the core code are in `src/test/`. To compile and run them:
+Unit tests for the core code are in `src/test/` and `test/`. To compile and run them:
 
-    cd src; make -f makefile.unix test
+    make check
+    python3.4 test/functional/test_runner.py
 
-Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
+Unit tests for the GUI code are in `src/qt/test/`. They are compiled with the Qt code and run with `make check`
 
-    qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
-    make -f Makefile.test
-    ./defcoin-qt_test
+----------------------------------
+### Themeing
 
+The theme data for the Qt GUI is stored in `src/qt/theme.h`. 
+
+----------------------------------
+## To Do
+
+Rename the Defcoin units from mDFC and μDFC in favor of a more flavorful name similar to [Litecoin](https://github.com/litecoin-project/litecoin/blob/master/src/qt/bitcoinunits.cpp#L43).
+This is stored in the file [```src/qt/bitcoinunits.cpp```](https://github.com/nah012/defcoin/blob/master/src/qt/bitcoinunits.cpp) on [lines 43 - 45](https://github.com/nah012/defcoin/blob/master/src/qt/bitcoinunits.cpp#L43-L45)
+```
+    case BTC: return QString("DFC");
+    case mBTC: return QString("mDFC");
+    case uBTC: return QString::fromUtf8("μDFC");
+```
+and on [lines 54 - 56](https://github.com/nah012/defcoin/blob/master/src/qt/bitcoinunits.cpp#L54-L56)
+```
+    case BTC: return QString("Defcoins");
+    case mBTC: return QString("Milli-Defcoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-Defcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+```
