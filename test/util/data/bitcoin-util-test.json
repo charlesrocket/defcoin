@@ -452,7 +452,7 @@
     ["-json",
      "-create",
      "in=69e9c12d30a6cd598a31ddfcaabeb9d9f0baf8938bf0ba6610beb04f589cc5ef:0:4294967293",
-     "outaddr=0.002:LhzRRruapBx5gEtAf9RuVEePrzcG1wxRYa"],
+     "outaddr=0.002:DKfzXQG7RiH3wE9tNJEKd3PK3UdgQshoTP"],
     "output_cmp": "txcreatedata_seq0.json",
     "description": "Creates a new transaction with one input with sequence number and one address output (output in json)"
   },
