@@ -19,7 +19,7 @@ from binascii import b2a_hex
 from segwit_addr import bech32_encode, decode, convertbits, CHARSET
 
 # key types
-PUBKEY_ADDRESS = 48
+PUBKEY_ADDRESS = 30
 SCRIPT_ADDRESS = 5
 SCRIPT_ADDRESS2 = 50
 PUBKEY_ADDRESS_TEST = 111
