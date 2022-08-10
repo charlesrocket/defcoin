@@ -28,10 +28,9 @@ Drag Defcoin Core to your applications folder, and then run Defcoin Core.
 
 ### Need Help?
 
-* See the documentation at the [Defcoin Wiki](https://defcoin.info/)
-for help and more information.
-* Ask for help on [#defcoin](http://webchat.freenode.net?channels=defcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=defcoin).
-* Ask for help on the [DefcoinTalk](https://defcointalk.io/) forums, in the [Technical Support section](https://defcointalk.io/c/technical-support).
+* See the documentation at the [Defcoin Wiki](https://defcoin.info/) for help and more information.
+* Ask for help on [#defcoin](https://webchat.freenode.net/#defcoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#defcoin).
+* Ask for help on the [DefcoinTalk](https://defcointalk.io/) forums, in the [Technical Support board](https://defcointalk.io/c/technical-support).
 
 Building
 ---------------------
@@ -54,6 +53,7 @@ The Defcoin repo's [root README](/README.md) contains relevant information on th
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
+- [Source Code Documentation (External Link)](https://doxygen.bitcoincore.org/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -65,13 +65,14 @@ The Defcoin repo's [root README](/README.md) contains relevant information on th
 
 ### Resources
 * Discuss on the [DefcoinTalk](https://defcointalk.io/) forums.
-* Discuss general Defcoin development on #defcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=defcoin-dev.
+* Discuss general Defcoin development on #defcoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#defcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
 - [bitcoin.conf Configuration File](bitcoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
+- [Reduce Memory](reduce-memory.md)
 - [Reduce Traffic](reduce-traffic.md)
 - [Tor Support](tor.md)
 - [Init Scripts (systemd/upstart/openrc)](init.md)
@@ -81,5 +82,3 @@ The Defcoin repo's [root README](/README.md) contains relevant information on th
 License
 ---------------------
 Distributed under the [MIT software license](/COPYING).
-This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
-cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
